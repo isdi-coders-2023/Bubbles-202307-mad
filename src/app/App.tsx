@@ -1,6 +1,6 @@
 import { Header } from '../header/header';
 
-export function App() {
+function App() {
   return (
     <>
       <Header></Header>
