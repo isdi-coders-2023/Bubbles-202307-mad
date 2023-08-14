@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: #092773;
+}
+.tittle {
+  padding-inline: 30vw;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  position: absolute;
+  text-shadow: 2px 2px 2px #000001;
+}
+.world {
+  width: 70%;
+  height: 100%;
+}
