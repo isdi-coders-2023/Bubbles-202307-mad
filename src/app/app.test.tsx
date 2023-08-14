@@ -4,7 +4,7 @@ import App from './app';
 
 describe('Given the component App', () => {
   describe('When we render it', () => {
-    render(<App></App>);
+    render(<App />);
     test('Then component should be in the document', () => {
       const element = screen.getByRole('heading');
       const text = screen.getByText('countries of the world');
