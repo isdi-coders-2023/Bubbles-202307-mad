@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import App from './app';
+import App from './App';
 
 describe('Given the component App', () => {
   describe('When we render it', () => {
