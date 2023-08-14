@@ -1,5 +1,11 @@
+import { Footer } from './footer/Footer';
+
 export function App() {
-  return <></>;
+  return (
+    <>
+      <Footer></Footer>
+    </>
+  );
 }
 
 export default App;
