@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { Header } from './Header';
+import App from './App';
 
-describe('Given the component Header', () => {
+describe('Given the component App', () => {
   describe('When we render it', () => {
-    render(<Header></Header>);
+    render(<App></App>);
     test('Then component should be in the document', () => {
       const element = screen.getByRole('heading');
       const text = screen.getByText('countries of the world');
