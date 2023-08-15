@@ -15,6 +15,7 @@ export const AppRoutes = ({ options }: Props) => {
     <Suspense>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="*" element={<Home></Home>}></Route>
         <Route path={paths[0]} element={<Home></Home>}></Route>
         <Route path={paths[1]} element={<></>}></Route>
         <Route path={paths[2]} element={<></>}></Route>
