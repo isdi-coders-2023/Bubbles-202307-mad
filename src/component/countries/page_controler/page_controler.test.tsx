@@ -6,8 +6,9 @@ describe('Given the component page_controler', () => {
   describe('When we render it', () => {
     render(<PageControler></PageControler>);
     test('the component should be in the document', () => {
-      const element = screen.getByRole('page_controler');
-      expect(element).toBeInTheDocument();
+      const element = screen.getAllByRole('button');
+      expect(element[0]).toBeInTheDocument();
+      expect(element[1]).toBeInTheDocument();
     });
   });
 });
