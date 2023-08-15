@@ -1,0 +1,23 @@
+.buttons {
+  background-color: #fde34f;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 25%;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: 'Irish Grover', cursive;
+}
+
+.buttonBox {
+  display: flex;
+  gap: 0.5rem;
+  .previousButton {
+    @extend .buttons;
+  }
+  .span {
+    font-size: 1rem;
+  }
+  .nextButton {
+    @extend .buttons;
+  }
+}
