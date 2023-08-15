@@ -4,11 +4,13 @@ export function OptionFilter() {
   return (
     <>
       <select defaultValue="">
-        <option value="" selected disabled>
+        <option value="" disabled>
           Elija un continente
         </option>
-        {continentOption.map((item) => (
-          <option value={item}>{item}</option>
+        {continentOption.map((item, index) => (
+          <option key={index} value={item}>
+            {item}
+          </option>
         ))}
       </select>
     </>
