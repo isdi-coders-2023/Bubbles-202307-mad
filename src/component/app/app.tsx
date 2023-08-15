@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <Header></Header>
-      {/* <Countries></Countries> */}
       <main>
         <AppRoutes options={menuOptions}></AppRoutes>
       </main>
