@@ -1,4 +1,4 @@
-import { menuOptions } from '../config';
+import { menuOptions } from '../../config';
 import style from './menu.module.scss';
 export function Menu() {
   return (

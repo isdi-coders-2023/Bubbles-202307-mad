@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { Menu } from './Menu';
+import { Menu } from './menu';
 
 describe('Given the componente Menu', () => {
   describe('When we render it', () => {

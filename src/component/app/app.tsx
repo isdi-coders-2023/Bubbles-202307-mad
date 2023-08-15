@@ -1,4 +1,4 @@
-import { Footer } from '../footer/Footer';
+import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 
 function App() {
