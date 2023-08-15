@@ -19,9 +19,6 @@ describe('Given the component card', () => {
     render(<Card key={0} country={mockCountry}></Card>);
     test('Then the component should be in the document', () => {});
     const element = screen.getByRole('listitem');
-    // const name = screen.getByText('');
-    // const flag = screen.getByText('');
-    // const continent = screen.getByText('');
     expect(element).toBeInTheDocument();
   });
 });
