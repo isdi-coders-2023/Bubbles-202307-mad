@@ -1,13 +1,15 @@
-import { arrCountries } from '../../service/countries_data';
+import { menuOptions } from '../../config';
+import { AppRoutes } from '../app_routes/app_routes';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
-import { Info } from '../info/info';
 
 function App() {
   return (
     <>
       <Header></Header>
-      <Info country={arrCountries[0]}></Info>
+      <main>
+        <AppRoutes options={menuOptions}></AppRoutes>
+      </main>
       <Footer></Footer>
     </>
   );
