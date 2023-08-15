@@ -17,8 +17,16 @@ describe('Given the component card', () => {
       maps: 'https://goo.gl/maps/5PSjvdJ1AyaLFRrG9',
     };
     render(<Card key={0} country={mockCountry}></Card>);
-    test('Then the component should be in the document', () => {});
-    const element = screen.getByRole('listitem');
-    expect(element).toBeInTheDocument();
+
+    test('Then the component should be in the document', () => {
+      const element = screen.getByRole('listitem');
+      const span1 = screen.getByText(mockCountry.name);
+      const span2 = screen.getByText(mockCountry.continent);
+      const flag = screen.getByRole('img');
+      expect(flag).toBeInTheDocument();
+      expect(span1).toBeInTheDocument();
+      expect(span2).toBeInTheDocument();
+      expect(element).toBeInTheDocument();
+    });
   });
 });
