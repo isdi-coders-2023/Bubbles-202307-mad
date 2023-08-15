@@ -1,4 +1,4 @@
-import { Countries } from '../../countries/countries';
+import { Countries } from '../../component/countries/countries';
 
 const Home = () => {
   return (
