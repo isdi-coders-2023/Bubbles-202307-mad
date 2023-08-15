@@ -1,0 +1,26 @@
+.spans {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Merienda', cursive;
+}
+.card {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28c9df;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.name {
+  @extend .spans;
+  font-size: 1rem;
+}
+.flag {
+  height: 60%;
+  width: 80%;
+}
+.continent {
+  @extend .spans;
+  font-size: 0.5rem;
+}
