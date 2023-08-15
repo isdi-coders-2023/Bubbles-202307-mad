@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { menuOptions } from '../../config';
 import styles from './error_404.module.scss';
 const Error404 = () => {
   return (
@@ -14,7 +16,9 @@ const Error404 = () => {
         </h2>
         <h2 className={styles.notFound}>Page not found</h2>
       </div>
-      <button className={styles.back}>Back to home</button>
+      <Link to={menuOptions[0].path}>
+        <button className={styles.back}>Back to home</button>
+      </Link>
       {/* <Link to={}></Link> */}
     </section>
   );
