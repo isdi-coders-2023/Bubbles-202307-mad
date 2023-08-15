@@ -1,6 +1,10 @@
 .spans {
   font-family: 'Merienda', cursive;
 }
+.link {
+  text-decoration: none;
+  display: flex;
+}
 .card {
   display: flex;
   gap: 1rem;
