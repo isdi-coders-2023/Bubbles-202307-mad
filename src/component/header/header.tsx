@@ -1,4 +1,4 @@
-import { Menu } from '../menu/Menu';
+import { Menu } from '../menu/menu';
 import styles from './header.module.scss';
 export const Header = () => {
   return (
