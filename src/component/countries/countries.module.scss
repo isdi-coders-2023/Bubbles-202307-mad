@@ -1,13 +1,15 @@
 .section {
   width: 100vw;
-  height: 70vh;
-  padding: 1rem;
+  min-height: 70vh;
+  padding-inline: 1rem;
+  padding-block: 3rem;
   background-color: #ffd691;
   display: flex;
   flex-direction: column;
   .ol {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }

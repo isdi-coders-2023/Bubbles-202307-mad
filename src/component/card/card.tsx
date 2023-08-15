@@ -6,9 +6,9 @@ type Props = {
 export const Card = (country: Props) => {
   return (
     <li className={styles.card}>
-      <span className="name">{country.country.name}</span>
+      <span className={styles.name}>{country.country.name}</span>
       <img className={styles.flag} src={country.country.flag} />
-      <span className="continent">{country.country.continent}</span>
+      <span className={styles.continent}>{country.country.continent}</span>
     </li>
   );
 };
