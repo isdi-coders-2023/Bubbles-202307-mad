@@ -9,15 +9,17 @@ export class ApiRepository implements Repository<CountryType> {
   constructor(urlBase: string) {
     this.urlBase = urlBase;
   }
-  private filterKeys(data: any) {
+  private async filterKeys(data: any) {
+    console.log(data[0]);
     const result = data.map((country: any) => {
       const objecto = {
+        name: country.name?.common,
         capital: country.capital,
-        coatOfArm: country.coatOfArms,
+        coatOfArm: country.coatOfArms?.png,
         continent: country.continents,
         currencies: country.currencies,
         demonym: country.demonyms?.eng?.f,
-        flag: country.flags.png,
+        flag: country.flags?.png,
         language: country.languages,
         // country.maps,
         // country.name,
@@ -27,7 +29,10 @@ export class ApiRepository implements Repository<CountryType> {
       return objecto;
     });
 
-    console.log(result[0]);
+    await result.forEach((element) => {
+      console.log(element.capital + '  ' + element.name);
+    });
+    // console.log(await result[0]);
 
     return result;
   }
