@@ -20,7 +20,7 @@ export class ApiRepository implements Repository<CountryType> {
         demonym: country.demonyms?.eng?.f,
         flag: country.flags?.png,
         language: country.languages,
-        maps: country.maps.googleMaps,
+        maps: country.maps?.googleMaps,
         population: country.population,
         timezone: country.timezones,
       };
