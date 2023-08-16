@@ -22,3 +22,10 @@ export const loadAllCountriesActionCreator = (
     payload: data,
   };
 };
+
+export const loadCardInfoActionCreater = (data: CountryType): CountryAction => {
+  return {
+    type: actionTypeNames.loadActualCardInfo,
+    payload: data,
+  };
+};

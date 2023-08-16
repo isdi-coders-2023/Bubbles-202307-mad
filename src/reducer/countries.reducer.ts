@@ -2,7 +2,7 @@ import { CountryType } from '../model/country_type';
 import { CountryAction } from './countries.action.creator';
 import { actionTypeNames } from './countries.action.names';
 
-export type CountriesState = CountryType[];
+export type CountriesState = CountryType[] | CountryType;
 export function countriesReducer(
   state: CountriesState,
   action: CountryAction
@@ -10,7 +10,19 @@ export function countriesReducer(
   switch (action.type) {
     case actionTypeNames.loadAllCountries:
       return action.payload as CountryType[];
-
+      break;
+    default:
+      return { ...state };
+  }
+}
+export function countryInfoReducer(
+  state: CountriesState,
+  action: CountryAction
+): CountriesState {
+  switch (action.type) {
+    case actionTypeNames.loadActualCardInfo:
+      return action.payload as CountryType;
+      break;
     default:
       return { ...state };
   }
