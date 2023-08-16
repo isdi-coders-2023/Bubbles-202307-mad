@@ -1,4 +1,4 @@
-import { arrCountries } from '../../service/countries_data';
+import { mockArrCountries } from '../../service/countries_data';
 import { Card } from '../card/card';
 import { OptionFilter } from '../option_filter/option_filter';
 import { PageControler } from '../page_controler/page_controler';
@@ -8,7 +8,7 @@ export function Countries() {
     <section className={styles.section}>
       <OptionFilter></OptionFilter>
       <ol className={styles.ol}>
-        {arrCountries.map((item, index) => (
+        {mockArrCountries.map((item, index) => (
           <Card key={index} country={item}></Card>
         ))}
       </ol>

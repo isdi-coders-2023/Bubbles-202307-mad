@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { MenuOption } from '../../model/menu_options';
+import { Info } from '../info/info';
 
 const Home = lazy(() => import('../../pages/home/home'));
 // const Favorites = lazy(() => import(''));
@@ -16,10 +17,10 @@ export const AppRoutes = ({ options }: Props) => {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="*" element={<Home></Home>}></Route>
+        <Route path="/country/:country" element={<Info></Info>} />
         <Route path={paths[0]} element={<Home></Home>}></Route>
         <Route path={paths[1]} element={<></>}></Route>
-        <Route path={paths[2]} element={<></>}></Route>
-        <Route path={paths[3]} element={<Error></Error>}></Route>
+        <Route path={paths[2]} element={<Error></Error>}></Route>
       </Routes>
     </Suspense>
   );

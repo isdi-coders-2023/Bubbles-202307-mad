@@ -1,6 +1,6 @@
 import { CountryType } from '../model/country_type';
 
-export const arrCountries: CountryType[] = [
+export const mockArrCountries: CountryType[] = [
   {
     name: 'Saudi Arabia',
     continent: 'Asia',
