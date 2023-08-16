@@ -6,7 +6,6 @@ import {
   countriesReducer,
   countryInfoReducer,
 } from '../reducer/countries.reducer';
-import { mockArrCountries } from '../service/countries_data';
 import { ApiRepository } from '../service/repository/apiRepository';
 
 const urlBase = 'https://restcountries.com/v3.1/all';
@@ -18,7 +17,7 @@ export function useCountries() {
   const [countries, dispatch] = useReducer(countriesReducer, []);
   const [countryInfo, dispatch2] = useReducer(
     countryInfoReducer,
-    mockArrCountries[0]
+    {} as CountryType
   );
 
   const loadAllCountries = useCallback(async () => {
@@ -31,7 +30,7 @@ export function useCountries() {
     }
   }, [repo]);
   const loadCountryInfo = (country: CountryType) => {
-    dispatch2(ac.loadCardInfoActionCreater(country));
+    dispatch2({ ...ac.loadCardInfoActionCreater(country) });
   };
 
   return {

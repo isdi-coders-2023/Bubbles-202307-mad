@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { menuOptions } from '../../config';
 import { useCountries } from '../../hooks/use_countries';
 import { mockArrCountries } from '../../service/countries_data';
 import style from './info.module.scss';
@@ -8,7 +10,9 @@ export function Info() {
   const { countryInfo } = useCountries();
   return (
     <section className={style.section}>
-      <button className={style.button}>Back to home</button>
+      <Link to={menuOptions[0].path}>
+        <button className={style.button}>Back to home</button>
+      </Link>
       <div>
         <span className={style.span}>{countryInfo.name}</span>
         <img className={style.img} src={countryInfo.flag} alt="flag" />
