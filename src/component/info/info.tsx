@@ -1,8 +1,9 @@
 import { mockArrCountries } from '../../service/countries_data';
 import style from './info.module.scss';
 
+const mockCountry = mockArrCountries[0];
+
 export function Info() {
-  const mockCountry = mockArrCountries[0];
   return (
     <section className={style.section}>
       <button className={style.button}>Back to home</button>
