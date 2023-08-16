@@ -9,10 +9,9 @@ export class ApiRepository implements Repository<CountryType> {
   constructor(urlBase: string) {
     this.urlBase = urlBase;
   }
-  private async filterKeys(data: any) {
-    console.log(data[0]);
+  private async filterKeys(data: any): Promise<CountryType[]> {
     const result = data.map((country: any) => {
-      const objecto = {
+      const countryData = {
         name: country.name?.common,
         capital: country.capital,
         coatOfArm: country.coatOfArms?.png,
@@ -21,25 +20,19 @@ export class ApiRepository implements Repository<CountryType> {
         demonym: country.demonyms?.eng?.f,
         flag: country.flags?.png,
         language: country.languages,
-        // country.maps,
-        // country.name,
-        // country.population,
-        // country.timezone}
+        maps: country.maps.googleMaps,
+        population: country.population,
+        timezone: country.timezones,
       };
-      return objecto;
+      return countryData;
     });
-
-    await result.forEach((element) => {
-      console.log(element.capital + '  ' + element.name);
-    });
-    // console.log(await result[0]);
 
     return result;
   }
 
-  async getAll() {
+  async getAll(): Promise<CountryType[]> {
     const response = await fetch(this.urlBase);
-    const data: [] = await response.json();
+    const data = await response.json();
     const arrayCountries = await this.filterKeys(data);
     return arrayCountries;
   }
