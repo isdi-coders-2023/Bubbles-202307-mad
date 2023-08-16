@@ -10,14 +10,13 @@ export class ApiRepository implements Repository<CountryType> {
     this.urlBase = urlBase;
   }
   private filterKeys(data: any) {
-    console.log(data[0]);
     const result = data.map((country: any) => {
       const objecto = {
         capital: country.capital,
         coatOfArm: country.coatOfArms,
         continent: country.continents,
         currencies: country.currencies,
-        demonym: country.demonyms.eng,
+        demonym: country.demonyms?.eng?.f,
         flag: country.flags.png,
         language: country.languages,
         // country.maps,
@@ -27,8 +26,9 @@ export class ApiRepository implements Repository<CountryType> {
       };
       return objecto;
     });
+
     console.log(result[0]);
-    console.log(result[0].demonym.eng.f);
+
     return result;
   }
 
