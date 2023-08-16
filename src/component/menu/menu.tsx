@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { menuOptions } from '../../config';
 import style from './menu.module.scss';
 export function Menu() {
-  console.log(menuOptions.length);
   return (
     <>
       <nav className={style.nav}>
