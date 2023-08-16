@@ -1,33 +1,31 @@
-import { CountryType } from '../../model/country_type';
+import { mockArrCountries } from '../../service/countries_data';
 import style from './info.module.scss';
 
-type Props = {
-  country: CountryType;
-};
-export function Info(country: Props) {
+export function Info() {
+  const mockCountry = mockArrCountries[0];
   return (
     <section className={style.section}>
       <button className={style.button}>Back to home</button>
       <div>
-        <span className={style.span}>{country.country.name}</span>
-        <img className={style.img} src={country.country.flag} alt="flag" />
+        <span className={style.span}>{mockCountry.name}</span>
+        <img className={style.img} src={mockCountry.flag} alt="flag" />
       </div>
       <div>
         <img
           className={style.imgArmy}
-          src={country.country.coatOfArmy}
+          src={mockCountry.coatOfArmy}
           alt="flag of Army"
         />
       </div>
       <ol className={style.text}>
-        <li>Capital: {country.country.capital}</li>
-        <li>Language: {country.country.language}</li>
-        <li>Demonym: {country.country.demonym}</li>
-        <li>Currencies: {country.country.currencies}</li>
-        <li>Population: {country.country.population}</li>
-        <li>Timezone: {country.country.timezone}</li>
+        <li>Capital: {mockCountry.capital}</li>
+        <li>Language: {mockCountry.language}</li>
+        <li>Demonym: {mockCountry.demonym}</li>
+        <li>Currencies: {mockCountry.currencies}</li>
+        <li>Population: {mockCountry.population}</li>
+        <li>Timezone: {mockCountry.timezone}</li>
       </ol>
-      <div className={style.maps}>map: {country.country.maps}</div>
+      <div className={style.maps}>map: {mockCountry.maps}</div>
     </section>
   );
 }
