@@ -29,8 +29,9 @@ export function useCountries() {
       navigate('/error');
     }
   }, [repo]);
+
   const loadCountryInfo = (country: CountryType) => {
-    dispatch2({ ...ac.loadCardInfoActionCreater(country) });
+    dispatch2(ac.loadCardInfoActionCreater(country));
   };
 
   return {
