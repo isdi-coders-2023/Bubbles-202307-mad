@@ -3,7 +3,7 @@ import { CountryType } from '../../model/country_type';
 export interface Repository<T extends { name: string }> {
   getAll(): Promise<T[]>;
 }
-const urlBase = 'https://restcountries.com/v3.1/all';
+
 export class ApiRepository implements Repository<CountryType> {
   urlBase: string;
   constructor(urlBase: string) {
