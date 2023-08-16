@@ -1,4 +1,4 @@
-import { ApiRepository } from './repository';
+import { ApiRepository } from './apiRepository';
 
 describe('Given the class ApiRepository', () => {
   describe('When its instantiate a new ApiRepository', () => {
