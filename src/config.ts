@@ -1,10 +1,10 @@
 import { MenuOption } from './model/menu_options';
 
 export const menuOptions: MenuOption[] = [
-  { path: '/home', label: 'Home' },
+  { path: '/countries', label: 'Home' },
   { path: '/your_countries', label: 'Your countries' },
-  { path: '/favorite', label: 'Favorites' },
   { path: '/error', label: 'Error404' },
+  { path: '/favorite', label: 'Favorites' },
 ];
 
 export const continentOption: string[] = [
