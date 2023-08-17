@@ -4,7 +4,7 @@ import { menuOptions } from '../../config';
 import { MenuOption } from '../../model/menu_options';
 
 import { MemoryRouter as Router } from 'react-router-dom';
-import { AppContextProvider } from '../../context/app.context.provider';
+import { AppContextProvider } from '../../context/app_context_provider';
 import { AppRoutes } from './app_routes';
 
 describe('Given the componente AppRoutes', () => {

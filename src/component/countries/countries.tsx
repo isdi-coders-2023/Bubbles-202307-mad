@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { AppContext } from '../../context/app.context';
+import { AppContext } from '../../context/app_context';
 import { Card } from '../card/card';
 import { OptionFilter } from '../option_filter/option_filter';
 import { PageControler } from '../page_controler/page_controler';
@@ -13,7 +13,7 @@ export function Countries() {
     loadAllCountries();
   }, [loadAllCountries]);
 
-  countries.forEach((item) => console.log(item.currencies));
+  // countries.forEach((item) => console.log(item.currencies));
   return (
     <section className={styles.section}>
       <OptionFilter></OptionFilter>

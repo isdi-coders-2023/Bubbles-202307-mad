@@ -11,6 +11,8 @@ export function countriesReducer(
     case actionTypeNames.loadAllCountries:
       return action.payload as CountryType[];
       break;
+    case actionTypeNames.filterByContinent:
+      return action.payload as CountryType[];
     default:
       return { ...(state as CountryType[]) };
   }
@@ -23,7 +25,20 @@ export function countryInfoReducer(
     case actionTypeNames.loadActualCardInfo:
       return action.payload as CountryType;
       break;
+
     default:
       return { ...(state as CountryType) };
   }
 }
+
+// export function filterByContinentReducer(
+//   state: CountriesState,
+//   action: CountryAction
+// ): CountryType[] {
+//   switch (action.type) {
+
+//       break;
+//     default:
+//       return { ...(state as CountryType[]) };
+//   }
+// }

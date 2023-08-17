@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../../context/app.context';
+import { AppContext } from '../../context/app_context';
 import { CountryType } from '../../model/country_type';
 import styles from './card.module.scss';
 type Props = {
