@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { AppContextProvider } from '../../context/app.context.provider';
 import { Card } from './card';
 describe('Given the component card', () => {
   describe('When we render it', () => {
@@ -8,7 +9,7 @@ describe('Given the component card', () => {
       name: 'Saudi Arabia',
       continent: 'Asia',
       flag: 'https://flagcdn.com/w320/sa.png',
-      coatOfArmy: 'https://mainfacts.com/media/images/coats_of_arms/sa.png',
+      coatOfArm: 'https://mainfacts.com/media/images/coats_of_arms/sa.png',
       capital: 'Riyadh',
       language: 'Arabic',
       demonym: 'Saudi Arabian',
@@ -19,7 +20,9 @@ describe('Given the component card', () => {
     };
     render(
       <Router>
-        <Card key={0} country={mockCountry}></Card>
+        <AppContextProvider>
+          <Card key={0} country={mockCountry}></Card>
+        </AppContextProvider>
       </Router>
     );
 
