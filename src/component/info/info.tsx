@@ -28,9 +28,9 @@ export function Info() {
       </div>
       <ol className={style.text}>
         <li>Capital: {countryInfo.capital}</li>
-        <li>Language: {countryInfo.language}</li>
+        {/* <li>Language: {countryInfo.language}</li> */}
         <li>Demonym: {countryInfo.demonym}</li>
-        <li>Currencies: {countryInfo.currencies}</li>
+        {/* <li>Currencies: {countryInfo.currencies}</li> */}
         <li>Population: {countryInfo.population}</li>
         <li>Timezone: {countryInfo.timezone}</li>
       </ol>

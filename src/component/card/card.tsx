@@ -14,7 +14,6 @@ export const Card = (country: Props) => {
     <li className={styles.li}>
       <Link
         onClick={() => {
-          debugger;
           loadCountryInfo(country.country);
         }}
         className={styles.card}
