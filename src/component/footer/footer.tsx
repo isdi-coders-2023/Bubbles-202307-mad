@@ -7,7 +7,7 @@ export function Footer() {
       <span className={styles.phrase}>Around the World</span>
       <img
         className={styles.logo}
-        src="footerBubbles.png"
+        src="../../footerBubbles.png"
         alt="logo color explosion"
       />
     </footer>

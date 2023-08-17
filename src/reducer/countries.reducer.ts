@@ -6,24 +6,24 @@ export type CountriesState = CountryType[] | CountryType;
 export function countriesReducer(
   state: CountriesState,
   action: CountryAction
-): CountriesState {
+): CountryType[] {
   switch (action.type) {
     case actionTypeNames.loadAllCountries:
       return action.payload as CountryType[];
       break;
     default:
-      return { ...state };
+      return { ...(state as CountryType[]) };
   }
 }
 export function countryInfoReducer(
   state: CountriesState,
   action: CountryAction
-): CountriesState {
+): CountryType {
   switch (action.type) {
     case actionTypeNames.loadActualCardInfo:
       return action.payload as CountryType;
       break;
     default:
-      return { ...state };
+      return { ...(state as CountryType) };
   }
 }

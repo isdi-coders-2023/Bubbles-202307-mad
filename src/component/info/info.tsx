@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import { menuOptions } from '../../config';
 import { useCountries } from '../../hooks/use_countries';
-import { mockArrCountries } from '../../service/countries_data';
 import style from './info.module.scss';
-
-const mockCountry = mockArrCountries[0];
 
 export function Info() {
   const { countryInfo } = useCountries();
