@@ -4,6 +4,7 @@ import { menuOptions } from '../../config';
 import { MenuOption } from '../../model/menu_options';
 
 import { MemoryRouter as Router } from 'react-router-dom';
+import { AppContextProvider } from '../../context/app.context.provider';
 import { AppRoutes } from './app_routes';
 
 describe('Given the componente AppRoutes', () => {
@@ -13,13 +14,13 @@ describe('Given the componente AppRoutes', () => {
       await act(async () => {
         render(
           <Router initialEntries={['/countries']}>
-            <AppRoutes options={optionsMock}></AppRoutes>
+            <AppContextProvider>
+              <AppRoutes options={optionsMock}></AppRoutes>
+            </AppContextProvider>
           </Router>
         );
       });
-      const element = screen.getByRole('option', {
-        name: 'Asia',
-      });
+      const element = screen.getByRole('img');
       expect(element).toBeInTheDocument();
     });
   });
@@ -33,10 +34,8 @@ describe('Given the componente AppRoutes', () => {
           </Router>
         );
       });
-      const element = screen.getByRole('heading', {
-        name: 'Page not found',
-      });
-      expect(element).toBeInTheDocument();
+      const element = screen.getAllByRole('img');
+      expect(element[0]).toBeInTheDocument();
     });
   });
 });

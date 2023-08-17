@@ -25,7 +25,6 @@ export function useCountries() {
       const countries = await repo.getAll();
       dispatch(ac.loadAllCountriesActionCreator(countries));
     } catch (error) {
-      console.error((error as Error).message);
       navigate('/error');
     }
   }, [repo]);

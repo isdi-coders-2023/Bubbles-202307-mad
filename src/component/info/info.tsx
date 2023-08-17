@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../../conext/app.context';
 import { menuOptions } from '../../config';
+import { AppContext } from '../../context/app.context';
 import style from './info.module.scss';
 
 export function Info() {

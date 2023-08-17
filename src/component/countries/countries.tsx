@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { AppContext } from '../../conext/app.context';
+import { AppContext } from '../../context/app.context';
 import { Card } from '../card/card';
 import { OptionFilter } from '../option_filter/option_filter';
 import { PageControler } from '../page_controler/page_controler';
