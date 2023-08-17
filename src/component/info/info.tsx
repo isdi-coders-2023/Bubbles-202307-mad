@@ -8,7 +8,6 @@ export function Info() {
   const {
     countriesContext: { countryInfo },
   } = useContext(AppContext);
-  console.log(countryInfo);
 
   return (
     <section className={style.section}>
@@ -22,19 +21,21 @@ export function Info() {
       <div>
         <img
           className={style.imgArmy}
-          src={countryInfo.coatOfArmy}
+          src={countryInfo.coatOfArm}
           alt="flag of Army"
         />
       </div>
       <ol className={style.text}>
         <li>Capital: {countryInfo.capital}</li>
-        {/* <li>Language: {countryInfo.language}</li> */}
+        <li>Language: {countryInfo.language}</li>
         <li>Demonym: {countryInfo.demonym}</li>
         {/* <li>Currencies: {countryInfo.currencies}</li> */}
         <li>Population: {countryInfo.population}</li>
         <li>Timezone: {countryInfo.timezone}</li>
       </ol>
-      <div className={style.maps}>map: {countryInfo.maps}</div>
+      <div className={style.maps}>
+        map: <a href={countryInfo.maps}>{countryInfo.maps}</a>
+      </div>
     </section>
   );
 }

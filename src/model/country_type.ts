@@ -2,7 +2,7 @@ export type CountryType = {
   name: string;
   continent: string;
   flag: string;
-  coatOfArmy: string;
+  coatOfArm: string;
   capital: string;
   language: string;
   demonym: string;
