@@ -5,6 +5,8 @@ import style from './info.module.scss';
 
 export function Info() {
   const { countryInfo } = useCountries();
+  console.log(countryInfo);
+
   return (
     <section className={style.section}>
       <Link to={menuOptions[0].path}>
