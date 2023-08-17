@@ -1,9 +1,9 @@
-import { CountryType } from '../model/country_type';
+// import { CountryType } from '../model/country_type';
 
-export const mockArrCountries: CountryType[] = [
+export const mockArrCountries = [
   {
     name: 'Saudi Arabia',
-    continent: 'Asia',
+    continents: ['Asia'],
     flag: 'https://flagcdn.com/w320/sa.png',
     coatOfArm: 'https://mainfacts.com/media/images/coats_of_arms/sa.png',
     capital: 'Riyadh',
@@ -16,7 +16,7 @@ export const mockArrCountries: CountryType[] = [
   },
   {
     name: 'Saudi Arabia',
-    continent: 'Asia',
+    continents: ['Asia'],
     flag: 'https://flagcdn.com/w320/sa.png',
     coatOfArm: 'https://mainfacts.com/media/images/coats_of_arms/sa.png',
     capital: 'Riyadh',

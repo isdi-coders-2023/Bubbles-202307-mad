@@ -13,7 +13,6 @@ let allCountries: CountryType[] = [];
 export function useCountries() {
   const repo = useMemo(() => new ApiRepository(urlBase), []);
   const navigate = useNavigate();
-
   const [countries, dispatch] = useReducer(countriesReducer, []);
   const [countryInfo, dispatch2] = useReducer(
     countryInfoReducer,
