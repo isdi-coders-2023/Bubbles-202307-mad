@@ -15,9 +15,10 @@ export function useCountries() {
   const navigate = useNavigate();
 
   const [countries, dispatch] = useReducer(countriesReducer, []);
-  const [countryInfo, dispatch2] = useReducer(countryInfoReducer, {
-    name: 'España',
-  } as CountryType);
+  const [countryInfo, dispatch2] = useReducer(
+    countryInfoReducer,
+    {} as CountryType
+  );
 
   const loadAllCountries = useCallback(async () => {
     try {

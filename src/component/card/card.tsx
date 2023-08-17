@@ -1,16 +1,22 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useCountries } from '../../hooks/use_countries';
+import { AppContext } from '../../conext/app.context';
 import { CountryType } from '../../model/country_type';
 import styles from './card.module.scss';
 type Props = {
   country: CountryType;
 };
 export const Card = (country: Props) => {
-  const { loadCountryInfo } = useCountries();
+  const {
+    countriesContext: { loadCountryInfo },
+  } = useContext(AppContext);
   return (
     <li className={styles.li}>
       <Link
-        onClick={() => loadCountryInfo(country.country)}
+        onClick={() => {
+          debugger;
+          loadCountryInfo(country.country);
+        }}
         className={styles.card}
         to={`/country/${country.country.name}`}
       >
