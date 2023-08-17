@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../../conext/app.context';
 import { menuOptions } from '../../config';
-import { useCountries } from '../../hooks/use_countries';
 import style from './info.module.scss';
 
 export function Info() {
-  const { countryInfo } = useCountries();
+  const {
+    countriesContext: { countryInfo },
+  } = useContext(AppContext);
   console.log(countryInfo);
 
   return (
