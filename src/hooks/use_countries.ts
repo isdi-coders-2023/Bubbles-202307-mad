@@ -30,16 +30,16 @@ export function useCountries() {
   }, [repo]);
 
   const loadCountryInfo = (country: CountryType) => {
-    dispatch2(ac.loadCardInfoActionCreater(country));
+    dispatch2(ac.loadCardInfoActionCreator(country));
   };
   const filterByContinent = (continent: string) => {
     if (continent === 'All') {
-      return dispatch(ac.filterByContinentCreater(allCountries));
+      return dispatch(ac.filterByContinentCreator(allCountries));
     }
     const filteredCountries = allCountries.filter(
       (country) => country.continent === continent
     );
-    dispatch(ac.filterByContinentCreater(filteredCountries));
+    dispatch(ac.filterByContinentCreator(filteredCountries));
   };
   return {
     loadAllCountries,
