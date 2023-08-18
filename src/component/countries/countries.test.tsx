@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AppContextProvider } from '../../context/app.context.provider';
+import { AppContextProvider } from '../../context/app_context_provider';
 import { Countries } from './countries';
 describe('Given the componente Countries', () => {
   describe('When we render it', () => {

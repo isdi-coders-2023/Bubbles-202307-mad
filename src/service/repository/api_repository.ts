@@ -24,7 +24,7 @@ export class ApiRepository implements Repository<CountryType> {
         name: country.name?.common,
         capital: country.capital,
         coatOfArm: country.coatOfArms?.png,
-        continent: country.continents,
+        continent: country.continents[0],
         currencies: currencies,
         demonym: country.demonyms?.eng?.f,
         flag: country.flags?.png,

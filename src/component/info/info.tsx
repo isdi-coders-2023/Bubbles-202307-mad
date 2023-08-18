@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { menuOptions } from '../../config';
-import { AppContext } from '../../context/app.context';
+import { AppContext } from '../../context/app_context';
 import style from './info.module.scss';
 
 export function Info() {
@@ -29,12 +29,15 @@ export function Info() {
         <li>Capital: {countryInfo.capital}</li>
         <li>Language: {countryInfo.language}</li>
         <li>Demonym: {countryInfo.demonym}</li>
-        {/* <li>Currencies: {countryInfo.currencies}</li> */}
+        <li>Currencies: {countryInfo.currencies}</li>
         <li>Population: {countryInfo.population}</li>
         <li>Timezone: {countryInfo.timezone}</li>
       </ol>
       <div className={style.maps}>
-        map: <a href={countryInfo.maps}>{countryInfo.maps}</a>
+        map:{' '}
+        <a target="_blank" href={countryInfo.maps}>
+          {countryInfo.maps}
+        </a>
       </div>
     </section>
   );

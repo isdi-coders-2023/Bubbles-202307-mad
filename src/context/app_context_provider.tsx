@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { useCountries } from '../hooks/use_countries';
-import { AppContext, AppContextStructure } from './app.context';
+import { AppContext, AppContextStructure } from './app_context';
 
 type Props = {
   children: ReactNode;

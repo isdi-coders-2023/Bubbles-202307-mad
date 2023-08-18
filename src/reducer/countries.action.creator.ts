@@ -9,7 +9,7 @@ type Keys = keyof typeof actionTypeNames;
 
 export type CountryAction = {
   type: (typeof actionTypeNames)[Keys];
-  payload: CountryType[] | CountryType | number;
+  payload: CountryType[] | CountryType | number | string;
 };
 
 // CRUD
@@ -26,6 +26,15 @@ export const loadAllCountriesActionCreator = (
 export const loadCardInfoActionCreater = (data: CountryType): CountryAction => {
   return {
     type: actionTypeNames.loadActualCardInfo,
+    payload: data,
+  };
+};
+
+export const filterByContinentCreater = (
+  data: CountryType[]
+): CountryAction => {
+  return {
+    type: actionTypeNames.filterByContinent,
     payload: data,
   };
 };
