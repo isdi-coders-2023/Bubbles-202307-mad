@@ -18,10 +18,6 @@ export function useCountries() {
     countryInfoReducer,
     {} as CountryType
   );
-  // const [contriesFiltered, dispatch3] = useReducer(
-  //   filterByContinentReducer,
-  //   countries
-  // );
 
   const loadAllCountries = useCallback(async () => {
     try {
@@ -52,6 +48,5 @@ export function useCountries() {
     countries,
     countryInfo,
     allCountries,
-    // contriesFiltered,
   };
 }

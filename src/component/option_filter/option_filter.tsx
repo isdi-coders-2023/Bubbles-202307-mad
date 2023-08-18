@@ -12,9 +12,9 @@ export function OptionFilter() {
         onChange={(event) =>
           filterByContinent((event.target as HTMLSelectElement).value as string)
         }
-        defaultValue=""
+        defaultValue="defaultValue"
       >
-        <option value="All" disabled>
+        <option value="defaultValue" disabled>
           Choose a continent
         </option>
         {continentOption.map((item, index) => (

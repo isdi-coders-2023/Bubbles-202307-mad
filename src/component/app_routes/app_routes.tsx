@@ -4,9 +4,7 @@ import { MenuOption } from '../../model/menu_options';
 import { Info } from '../info/info';
 
 const Home = lazy(() => import('../../pages/home/home'));
-// const Favorites = lazy(() => import(''));
-// const Info = lazy(() => import(''));
-const Error = lazy(() => import('../../pages/error/error'));
+const Error404 = lazy(() => import('../../pages/error/error'));
 type Props = {
   options: MenuOption[];
 };
@@ -20,7 +18,7 @@ export const AppRoutes = ({ options }: Props) => {
         <Route path="/country/:country" element={<Info></Info>} />
         <Route path={paths[0]} element={<Home></Home>}></Route>
         <Route path={paths[1]} element={<></>}></Route>
-        <Route path={paths[2]} element={<Error></Error>}></Route>
+        <Route path={paths[2]} element={<Error404></Error404>}></Route>
       </Routes>
     </Suspense>
   );
