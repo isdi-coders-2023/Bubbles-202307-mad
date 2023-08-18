@@ -11,6 +11,7 @@ import { ApiRepository } from '../service/repository/api_repository';
 const urlBase = 'https://restcountries.com/v3.1/all';
 let allCountries: CountryType[] = [];
 let currentPage = 1;
+let currentContinent = 'All';
 export function useCountries() {
   const repo = useMemo(() => new ApiRepository(urlBase), []);
   const navigate = useNavigate();
@@ -24,7 +25,12 @@ export function useCountries() {
     try {
       const countries = await repo.getAll();
       allCountries = countries;
-      dispatch(ac.loadAllCountriesActionCreator(countries));
+      allCountries = assignPaginated(countries);
+      dispatch(
+        ac.loadAllCountriesActionCreator(
+          allCountries.filter((country) => country.page === currentPage)
+        )
+      );
     } catch (error) {
       navigate('/error');
     }
@@ -34,23 +40,35 @@ export function useCountries() {
     dispatch2(ac.loadCardInfoActionCreater(country));
   };
   const filterByContinent = (continent: string) => {
-    assignPaginated();
-    if (continent === 'All') {
-      assignPaginated();
-      return dispatch(ac.filterByContinentCreater(allCountries));
+    currentContinent = continent;
+
+    if (currentContinent === 'All') {
+      const countries = assignPaginated(allCountries).filter(
+        (country) => country.page === currentPage
+      );
+      return dispatch(ac.filterByContinentCreater(countries));
+    } else {
+      const countryContinent = allCountries.filter(
+        (country) => country.continent === currentContinent
+      );
+      const countries = assignPaginated(countryContinent).filter(
+        (country) => country.page === currentPage
+      );
+      dispatch(ac.filterByContinentCreater(countries));
     }
-    const filteredCountries = allCountries.filter(
-      (country) => country.continent === continent
-    );
-    dispatch(ac.filterByContinentCreater(filteredCountries));
   };
 
-  const assignPaginated = () => {
-    const countriesPerPage = 10;
+  const assignPaginated = (arrCountries: CountryType[]) => {
+    const countriesPerPage = 5;
     let totalCountries = 0;
     let currentPage = 1;
-    allCountries = allCountries.map((country) => {
-      if (totalCountries > 9) {
+    debugger;
+    if (!arrCountries.length) {
+      arrCountries = allCountries;
+    }
+
+    arrCountries = arrCountries.map((country) => {
+      if (totalCountries === countriesPerPage) {
         totalCountries = 0;
         currentPage++;
       } else {
@@ -59,12 +77,20 @@ export function useCountries() {
       country.page = currentPage;
       return country;
     });
+
+    return arrCountries;
+  };
+
+  const nextPage = () => {
+    currentPage++;
+    filterByContinent(currentContinent);
   };
 
   return {
     loadAllCountries,
     loadCountryInfo,
     filterByContinent,
+    nextPage,
     countries,
     countryInfo,
     allCountries,
