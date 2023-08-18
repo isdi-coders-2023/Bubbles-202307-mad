@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Form } from 'react-router-dom';
 import { Countries } from '../countries/countries';
-import { Form } from '../form_/form';
+
 
 export type NewCountry = {
   Imaginarycountry: string;
@@ -42,48 +43,47 @@ const newCountries = {
 return (
    <div>
     <h1>Invented new country</h1>
-   <form action="/my-invented-form-page" 
-   method="post">
+   <form action="/my-invented-form-page" method="post">
 <ul>
     <li>
-      <label for="country">Country:</label>
-      <input type="text" id="country" name="user_country"  onChange={(event) => this.useState({name: event.target.value})} />
+      <label for="country">Country of fantasy:</label>
+      <input type="text" name="user_country"  onChange={(event) => useState({name: event.target.value})}></input>
     </li>
     <li>
       <label for="flag-image">Flag Image:</label>
-      <input type="img.png" id="flag" name="user_flag-image" handleSubmit=""/>
+      <input type="img.png"  name="user_flag-image" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
     <li>
       <label for="language">Language or signal language:</label>
-      <input id="text" country="user_language" handleSubmit= ""></input>
+      <input type="language_signal" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
       <li>
       <label for="currencies">Currencies or barter:</label>
-      <input id="text" country="user_currencies" handleSubmit=""></input>
+      <input id="text" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
       <li>
-      <label for="timeZone">Time Zone:</label>
-      <input id="number" country="user_timeZone" handleSubmit=""></input>
+      <label for="favorite creature">Favorite creature:</label>
+      <input id="number" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
       <li>
-      <label for="continent">Continent:</label>
-      <input id="text" country="user_continent" handleSubmit=""></input>
+      <label for="position in the universe">Position in the universe:</label>
+      <input id="text" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
       <li>
       <label for="capital">Capital:</label>
-      <input id="text" country="user_capital" handleSubmit=""></input>
+      <input id="text"onChange={(event) => useState({name: event.target.value})}></input>
     </li>
        <li>
       <label for="demonym">Demonym:</label>
-      <input id="demonym" country="user_demonym" handleSubmit=""></input>
+      <input id="demonym" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
       <li>
       <label for="population"> Population:</label>
-      <input id="population" country="user_ population"></input>
+      <input id="population" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
     <li>
       <label for="map-url">Map URL:</label>
-      <input id="url" country="user_mapUrl"></input>
+      <input id="url" onChange={(event) => useState({name: event.target.value})}></input>
     </li>
   </ul>
   
