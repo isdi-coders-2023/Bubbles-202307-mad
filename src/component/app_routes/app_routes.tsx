@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { MenuOption } from '../../model/menu_options';
 import { Info } from '../info/info';
 
-const Home = lazy(() => import('../../pages/home/home'));
+const Home = lazy(() => import('../../pages/home/page_home'));
 const Error404 = lazy(() => import('../../pages/error/error'));
 type Props = {
   options: MenuOption[];

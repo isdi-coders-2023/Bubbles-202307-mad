@@ -19,7 +19,6 @@ const Error404 = () => {
       <Link to={menuOptions[0].path}>
         <button className={styles.back}>Back to home</button>
       </Link>
-      {/* <Link to={}></Link> */}
     </section>
   );
 };
