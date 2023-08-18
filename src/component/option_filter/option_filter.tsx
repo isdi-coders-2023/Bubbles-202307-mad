@@ -10,15 +10,15 @@ export function OptionFilter() {
     <>
       <select
         onChange={(event) =>
-          filterByContinent((event.target as HTMLSelectElement).value as string)
+          filterByContinent((event.target as HTMLSelectElement).value)
         }
         defaultValue="defaultValue"
       >
         <option value="defaultValue" disabled>
           Choose a continent
         </option>
-        {continentOption.map((item, index) => (
-          <option key={index + 1} value={item}>
+        {continentOption.map((item) => (
+          <option key={item} value={item}>
             {item}
           </option>
         ))}

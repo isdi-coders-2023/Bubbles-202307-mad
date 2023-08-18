@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useMemo } from 'react';
 import { useCountries } from '../hooks/use_countries';
 import { AppContext, AppContextStructure } from './app_context';
 
@@ -7,7 +7,7 @@ type Props = {
 };
 export function AppContextProvider({ children }: Props) {
   const context: AppContextStructure = {
-    countriesContext: useCountries(),
+    countriesContext: useMemo(() => useCountries(), []),
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;

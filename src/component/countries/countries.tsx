@@ -13,7 +13,6 @@ export function Countries() {
     loadAllCountries();
   }, [loadAllCountries]);
 
-  // countries.forEach((item) => console.log(item.currencies));
   return (
     <section className={styles.section}>
       <OptionFilter></OptionFilter>
