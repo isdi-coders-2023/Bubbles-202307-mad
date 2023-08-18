@@ -18,7 +18,7 @@ export function OptionFilter() {
           Choose a continent
         </option>
         {continentOption.map((item, index) => (
-          <option key={index} value={item}>
+          <option key={index + 1} value={item}>
             {item}
           </option>
         ))}

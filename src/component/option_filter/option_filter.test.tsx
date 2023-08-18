@@ -1,17 +1,25 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
-import { AppContextProvider } from '../../context/app_context_provider';
+import { AppContext, AppContextStructure } from '../../context/app_context';
 import { OptionFilter } from './option_filter';
+
+jest.mock('../../hooks/use_countries');
 
 describe('Given the componente OptionFilter', () => {
   describe('When we render it', () => {
+    const filterByContinentMock = jest.fn();
+    const mockContextValue: AppContextStructure = {
+      countriesContext: {
+        filterByContinent: filterByContinentMock,
+      },
+    } as unknown as AppContextStructure;
     render(
-      <AppContextProvider>
+      <AppContext.Provider value={mockContextValue}>
         <Router>
           <OptionFilter></OptionFilter>
         </Router>
-      </AppContextProvider>
+      </AppContext.Provider>
     );
     test('the component should be in the document', () => {
       const elementOption = screen.getAllByRole('option');

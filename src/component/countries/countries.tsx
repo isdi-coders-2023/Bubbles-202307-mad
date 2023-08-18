@@ -18,8 +18,8 @@ export function Countries() {
     <section className={styles.section}>
       <OptionFilter></OptionFilter>
       <ol className={styles.ol}>
-        {countries.map((item, index) => (
-          <Card key={index} country={item}></Card>
+        {countries.map((item) => (
+          <Card key={item.name} country={item}></Card>
         ))}
       </ol>
       <PageControler></PageControler>

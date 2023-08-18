@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692345014445" clover="3.2.0">
-  <project timestamp="1692345014446" name="All files">
-    <metrics statements="150" coveredstatements="126" conditionals="10" coveredconditionals="2" methods="40" coveredmethods="29" elements="200" coveredelements="157" complexity="0" loc="150" ncloc="150" packages="19" files="22" classes="22"/>
+<coverage generated="1692351499374" clover="3.2.0">
+  <project timestamp="1692351499374" name="All files">
+    <metrics statements="148" coveredstatements="127" conditionals="10" coveredconditionals="2" methods="40" coveredmethods="29" elements="198" coveredelements="158" complexity="0" loc="148" ncloc="148" packages="19" files="22" classes="22"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\config.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.component.app">
@@ -30,21 +30,21 @@
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="12" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.component.card">
       <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="card.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\card\card.tsx">
         <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
@@ -54,17 +54,17 @@
       <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="countries.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\countries\countries.tsx">
         <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
       </file>
     </package>
@@ -76,7 +76,7 @@
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
       </file>
     </package>
@@ -129,45 +129,45 @@
       <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="option_filter.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\option_filter\option_filter.tsx">
         <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="21" count="12" type="stmt"/>
+        <line num="21" count="18" type="stmt"/>
       </file>
     </package>
     <package name="src.component.page_controler">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="page_controler.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\page_controler\page_controler.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.context">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="app_context.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\context\app_context.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
       </file>
       <file name="app_context_provider.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\context\app_context_provider.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.hooks">
-      <metrics statements="27" coveredstatements="18" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <metrics statements="27" coveredstatements="19" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
       <file name="use_countries.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\hooks\use_countries.ts">
-        <metrics statements="27" coveredstatements="18" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <metrics statements="27" coveredstatements="19" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="3"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
@@ -176,25 +176,25 @@
         <line num="11" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="5" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
         <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="37" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.error">
@@ -203,7 +203,7 @@
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
       </file>
     </package>
@@ -218,7 +218,7 @@
       </file>
     </package>
     <package name="src.reducer">
-      <metrics statements="20" coveredstatements="8" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="18" coveredstatements="8" conditionals="5" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name="countries.action.creator.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\reducer\countries.action.creator.ts">
         <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="6" count="5" type="stmt"/>
@@ -234,19 +234,17 @@
         <line num="1" count="5" type="stmt"/>
       </file>
       <file name="countries.reducer.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\reducer\countries.reducer.ts">
-        <metrics statements="12" coveredstatements="3" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="3" conditionals="5" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="3" count="5" type="stmt"/>
         <line num="6" count="5" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="3"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.service">
@@ -269,7 +267,7 @@
         <line num="23" count="2" type="stmt"/>
         <line num="36" count="2" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>

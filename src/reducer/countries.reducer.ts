@@ -10,6 +10,7 @@ export function countriesReducer(
   switch (action.type) {
     case actionTypeNames.loadAllCountries:
       return action.payload as CountryType[];
+    // return {...state, countries: action.payload}
     case actionTypeNames.filterByContinent:
       return action.payload as CountryType[];
     default:
