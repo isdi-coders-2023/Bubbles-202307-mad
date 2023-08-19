@@ -100,7 +100,7 @@ export function useCountries() {
   return {
     loadAllCountries,
     loadCountryInfo,
-    filterByContinent: filterCountries,
+    filterCountries,
     nextPage,
     previousPage,
     countries,
