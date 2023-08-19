@@ -48,12 +48,12 @@ export function FormCountry() {
   };
 
   return (
-    <form onSubmit={handleSubmit} src="../public/jpg">
+    <form onSubmit={handleSubmit} src="../public/Imagenjpg">
       <legend>Can you imagine a new country?</legend>
       <p>Please, let me know your invented country;</p>
 
-      <section className="group-control">
-        <div className="group-control">
+      <section className={style.group}>
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -65,7 +65,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -77,7 +77,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -89,7 +89,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -101,7 +101,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -113,7 +113,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -125,7 +125,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
@@ -137,7 +137,7 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group-control">
+        <div className="group">
           <input
             className={style.div}
             type="text"
