@@ -9,9 +9,9 @@ export function OptionFilter() {
   return (
     <>
       <select
-        onChange={(event) =>
-          filterByContinent((event.target as HTMLSelectElement).value)
-        }
+        onChange={(event) => {
+          filterByContinent((event.target as HTMLSelectElement).value);
+        }}
         defaultValue="defaultValue"
       >
         <option value="defaultValue" disabled>

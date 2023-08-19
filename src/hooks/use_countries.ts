@@ -44,21 +44,21 @@ export function useCountries() {
     currentContinent = continent;
 
     if (currentContinent === 'All') {
-      const countries = assignPaginated(allCountries).filter(
-        (country) => country.page === currentPage
-      );
-      return dispatch(ac.filterByContinentCreater(countries));
+      filterByPage(allCountries);
     } else {
       const countryContinent = allCountries.filter(
         (country) => country.continent === currentContinent
       );
-      const countries = assignPaginated(countryContinent).filter(
-        (country) => country.page === currentPage
-      );
-      dispatch(ac.filterByContinentCreater(countries));
+      filterByPage(countryContinent);
     }
   };
 
+  const filterByPage = (countriesWithoutPage: CountryType[]) => {
+    const countries = assignPaginated(countriesWithoutPage).filter(
+      (country) => country.page === currentPage
+    );
+    dispatch(ac.filterByContinentCreater(countries));
+  };
   const assignPaginated = (arrCountries: CountryType[]) => {
     const countriesPerPage = 5;
     let totalCountries = 0;
