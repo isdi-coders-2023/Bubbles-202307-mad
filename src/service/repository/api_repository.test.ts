@@ -1,4 +1,3 @@
-import { mockArrCountries } from '../countries_data';
 import { ApiRepository } from './api_repository';
 
 describe('Given the class ApiRepository', () => {
@@ -8,7 +7,7 @@ describe('Given the class ApiRepository', () => {
     test('Then we expected getAll method to be called', () => {
       global.fetch = jest.fn().mockResolvedValueOnce({
         ok: true,
-        json: jest.fn().mockResolvedValue(mockArrCountries),
+        json: jest.fn().mockResolvedValue('test'),
       });
       mockRepo.getAll();
       expect(global.fetch).toHaveBeenCalled();
