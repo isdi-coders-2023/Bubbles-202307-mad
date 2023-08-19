@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useReducer } from 'react';
+import { useCallback, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CountryType } from '../model/country_type';
 import * as ac from '../reducer/countries.action.creator';
@@ -14,7 +14,7 @@ let currentPage = 1;
 let totalPages = 0;
 let currentContinent = 'All';
 export function useCountries() {
-  const repo = useMemo(() => new ApiRepository(urlBase), []);
+  const repo = new ApiRepository(urlBase);
   const navigate = useNavigate();
   const [countries, dispatch] = useReducer(countriesReducer, []);
   const [countryInfo, dispatch2] = useReducer(
@@ -38,7 +38,7 @@ export function useCountries() {
   }, [repo]);
 
   const loadCountryInfo = (country: CountryType) => {
-    dispatch2(ac.loadCardInfoActionCreater(country));
+    dispatch2(ac.loadCardInfoActionCreator(country));
   };
   const filterByContinent = (continent: string) => {
     currentContinent = continent;

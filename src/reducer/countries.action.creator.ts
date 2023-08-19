@@ -23,14 +23,14 @@ export const loadAllCountriesActionCreator = (
   };
 };
 
-export const loadCardInfoActionCreater = (data: CountryType): CountryAction => {
+export const loadCardInfoActionCreator = (data: CountryType): CountryAction => {
   return {
     type: actionTypeNames.loadActualCardInfo,
     payload: data,
   };
 };
 
-export const filterByContinentCreater = (
+export const filterByContinentCreator = (
   data: CountryType[]
 ): CountryAction => {
   return {
