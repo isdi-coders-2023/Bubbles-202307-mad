@@ -22,6 +22,7 @@ describe('Given custom hook useCountries', () => {
       population: 26545864,
       timezone: 'UTC+03:00',
       maps: 'https://goo.gl/maps/5PSjvdJ1AyaLFRrG9',
+      page: 3,
     },
     { continent: 'All' } as CountryType,
   ];
