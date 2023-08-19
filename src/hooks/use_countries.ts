@@ -1,4 +1,4 @@
-import { useCallback, useReducer } from 'react';
+import { useCallback, useMemo, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CountryType } from '../model/country_type';
 import * as ac from '../reducer/countries.action.creator';
@@ -14,7 +14,7 @@ let currentPage = 1;
 let totalPages = 0;
 let currentContinent = 'All';
 export function useCountries() {
-  const repo = new ApiRepository(urlBase);
+  const repo = useMemo(() => new ApiRepository(urlBase), []);
   const navigate = useNavigate();
   const [countries, dispatch] = useReducer(countriesReducer, []);
   const [countryInfo, dispatch2] = useReducer(
@@ -40,25 +40,27 @@ export function useCountries() {
   const loadCountryInfo = (country: CountryType) => {
     dispatch2(ac.loadCardInfoActionCreator(country));
   };
-  const filterByContinent = (continent: string) => {
+  const filterCountries = (continent: string) => {
+    if (continent !== currentContinent) {
+      currentPage = 1;
+    }
     currentContinent = continent;
-
     if (currentContinent === 'All') {
-      filterByPage(allCountries);
+      const countries = assignPaginated(allCountries).filter(
+        (country) => country.page === currentPage
+      );
+      dispatch(ac.filterCountriesCreator(countries));
     } else {
       const countryContinent = allCountries.filter(
         (country) => country.continent === currentContinent
       );
-      filterByPage(countryContinent);
+      const countries = assignPaginated(countryContinent).filter(
+        (country) => country.page === currentPage
+      );
+      dispatch(ac.filterCountriesCreator(countries));
     }
   };
 
-  const filterByPage = (countriesWithoutPage: CountryType[]) => {
-    const countries = assignPaginated(countriesWithoutPage).filter(
-      (country) => country.page === currentPage
-    );
-    dispatch(ac.filterByContinentCreater(countries));
-  };
   const assignPaginated = (arrCountries: CountryType[]) => {
     const countriesPerPage = 5;
     let totalCountries = 0;
@@ -86,19 +88,19 @@ export function useCountries() {
   const nextPage = () => {
     if (currentPage === totalPages) return;
     currentPage++;
-    filterByContinent(currentContinent);
+    filterCountries(currentContinent);
   };
 
   const previousPage = () => {
     if (currentPage === 1) return;
     currentPage--;
-    filterByContinent(currentContinent);
+    filterCountries(currentContinent);
   };
 
   return {
     loadAllCountries,
     loadCountryInfo,
-    filterByContinent,
+    filterByContinent: filterCountries,
     nextPage,
     previousPage,
     countries,

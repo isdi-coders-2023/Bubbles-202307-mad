@@ -30,9 +30,7 @@ export const loadCardInfoActionCreator = (data: CountryType): CountryAction => {
   };
 };
 
-export const filterByContinentCreator = (
-  data: CountryType[]
-): CountryAction => {
+export const filterCountriesCreator = (data: CountryType[]): CountryAction => {
   return {
     type: actionTypeNames.filterByContinent,
     payload: data,
