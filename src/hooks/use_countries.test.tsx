@@ -6,6 +6,8 @@ import { CountryType } from '../model/country_type';
 import { ApiRepository } from '../service/repository/api_repository';
 import { useCountries } from './use_countries';
 
+// const mockedError404 = jest.fn().mockReturnValue(<h2>Error 404</h2>);
+
 describe('Given custom hook useCountries', () => {
   const mockCountry: CountryType = {
     name: 'Saudi Arabia',
@@ -26,30 +28,39 @@ describe('Given custom hook useCountries', () => {
       ...jest.requireActual('react-router-dom'),
       useNavigate: () => jest.fn().mockImplementation(),
     }));
+
     const { loadAllCountries, loadCountryInfo, filterByContinent, countries } =
       useCountries();
+    let resultFilter = countries
+      .every((country) => country.continent === 'Asia')
+      .toString();
+
     return (
       <div>
         <button onClick={() => loadAllCountries()}>1</button>
         <button onClick={() => loadCountryInfo(mockCountry)}>2</button>
-        <button onClick={() => filterByContinent('')}>3</button>
+        <button onClick={() => filterByContinent('Asia')}>3</button>
         <p>{countries[0]?.name}</p>
         <p>{mockCountry.name}</p>
+        <p>{resultFilter}</p>
+        <div>{}</div>
       </div>
     );
   };
-
   describe('When the component run the hook', () => {
-    ApiRepository.prototype.getAll = jest
-      .fn()
-      .mockResolvedValue([{ name: 'China' }]);
-
     beforeEach(() => {
-      render(
-        <Router>
-          <TestComponent></TestComponent>
-        </Router>
-      );
+      ApiRepository.prototype.getAll = jest.fn().mockResolvedValue([
+        { name: 'China', continent: 'Asia' },
+        { name: 'Spain', continent: 'Europe' },
+      ]);
+
+      {
+        render(
+          <Router>
+            <TestComponent></TestComponent>
+          </Router>
+        );
+      }
     });
 
     test('The component should be in the document', () => {
@@ -57,22 +68,47 @@ describe('Given custom hook useCountries', () => {
       expect(element[0]).toBeInTheDocument();
     });
     test('If we click button 1 new state should be render', async () => {
-      const buttons = screen.getAllByRole('button');
-      await userEvent.click(buttons[0]);
+      const button1 = screen.getByText(/1/);
+      await userEvent.click(button1);
       const countryElement = await screen.findByText('China');
       expect(countryElement).toBeInTheDocument();
     });
     test('If we click button 2 new state should be render', async () => {
-      const buttons = screen.getAllByRole('button');
-      await userEvent.click(buttons[1]);
+      const button2 = screen.getByText(/2/);
+      await userEvent.click(button2);
       const countryElement = await screen.findByText('Saudi Arabia');
       expect(countryElement).toBeInTheDocument();
     });
     test('If we click button 3 new state should be render', async () => {
-      const buttons = screen.getAllByRole('button');
-      await userEvent.click(buttons[2]);
-      const countryElement = await screen.findByText('Saudi Arabia');
+      const button3 = screen.getByText(/3/);
+      await userEvent.click(button3);
+      const countryElement = await screen.findByText('true');
       expect(countryElement).toBeInTheDocument();
     });
   });
+  // describe('When the hook with an Error', () => {
+  //   beforeEach(() => {
+  //     render(
+  //       <Router>
+  //         <TestComponent></TestComponent>
+  //       </Router>
+  //     );
+  //     ApiRepository.prototype.getAll = jest
+  //       .fn()
+  //       .mockRejectedValueOnce(
+  //         jest.mock('../component/error_404/error_404', () => mockedError404)
+  //       );
+  //   });
+
+  //   test.only('If we click button 1 error should send to console', async () => {
+  //     jest.mock('react-router-dom', () => ({
+  //       ...jest.requireActual('react-router-dom'),
+  //       useNavigate: () => jest.fn().mockImplementation(),
+  //     }));
+  //     const button1 = screen.getByText(/1/);
+  //     await userEvent.click(button1);
+  //     const elementError = screen.findByText('Error 404');
+  //     expect(elementError).toBeInTheDocument();
+  //   });
+  // });
 });

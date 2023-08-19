@@ -16,7 +16,7 @@ export const mockArrCountries = [
   },
   {
     name: 'Saudi Arabia',
-    continents: ['Asia'],
+    continents: ['Europa'],
     flag: 'https://flagcdn.com/w320/sa.png',
     coatOfArm: 'https://mainfacts.com/media/images/coats_of_arms/sa.png',
     capital: 'Riyadh',
