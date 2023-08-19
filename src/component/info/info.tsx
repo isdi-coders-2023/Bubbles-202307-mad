@@ -1,10 +1,14 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { menuOptions } from '../../config';
-import { useCountries } from '../../hooks/use_countries';
+import { AppContext } from '../../context/app_context';
 import style from './info.module.scss';
 
 export function Info() {
-  const { countryInfo } = useCountries();
+  const {
+    countriesContext: { countryInfo },
+  } = useContext(AppContext);
+
   return (
     <section className={style.section}>
       <Link to={menuOptions[0].path}>
@@ -17,7 +21,7 @@ export function Info() {
       <div>
         <img
           className={style.imgArmy}
-          src={countryInfo.coatOfArmy}
+          src={countryInfo.coatOfArm}
           alt="flag of Army"
         />
       </div>
@@ -29,7 +33,12 @@ export function Info() {
         <li>Population: {countryInfo.population}</li>
         <li>Timezone: {countryInfo.timezone}</li>
       </ol>
-      <div className={style.maps}>map: {countryInfo.maps}</div>
+      <div className={style.maps}>
+        map:{' '}
+        <a target="_blank" href={countryInfo.maps}>
+          {countryInfo.maps}
+        </a>
+      </div>
     </section>
   );
 }

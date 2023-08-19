@@ -11,7 +11,7 @@ export const continentOption: string[] = [
   'Asia',
   'Europe',
   'Africa',
-  'Americas',
+  'North America',
   'Oceania',
-  'Todos',
+  'All',
 ];
