@@ -13,7 +13,7 @@ export class ApiRepository implements Repository<CountryType> {
     const result = data.map((country: any) => {
       const language = country.languages
         ? Object.entries(country.languages)[0][1]
-        : 'Meow';
+        : 'Noot';
       const currencies = country.currencies
         ? (Object.entries(country.currencies) as any)[0][1].name +
           ' ' +
