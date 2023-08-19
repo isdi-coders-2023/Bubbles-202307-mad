@@ -88,6 +88,7 @@ export function useCountries() {
     currentPage++;
     filterByContinent(currentContinent);
   };
+
   const previousPage = () => {
     if (currentPage === 1) return;
     currentPage--;

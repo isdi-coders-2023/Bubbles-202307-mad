@@ -1,44 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692365041429" clover="3.2.0">
-  <project timestamp="1692365041429" name="All files">
-    <metrics statements="20" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6" elements="27" coveredelements="24" complexity="0" loc="20" ncloc="20" packages="4" files="4" classes="4"/>
-    <package name="src">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="config.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\config.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.component.app_routes">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-      <file name="app_routes.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\app_routes\app_routes.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.component.info">
-      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="info.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\info\info.tsx">
-        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+<coverage generated="1692454481365" clover="3.2.0">
+  <project timestamp="1692454481365" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="8" ncloc="8" packages="2" files="2" classes="2"/>
+    <package name="component.page_controler">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="page_controler.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\page_controler\page_controler.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.context">
+    <package name="context">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app_context.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\context\app_context.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
