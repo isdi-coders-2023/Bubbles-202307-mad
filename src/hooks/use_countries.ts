@@ -11,6 +11,7 @@ import { ApiRepository } from '../service/repository/api_repository';
 const urlBase = 'https://restcountries.com/v3.1/all';
 let allCountries: CountryType[] = [];
 let currentPage = 1;
+let totalPages = 0;
 let currentContinent = 'All';
 export function useCountries() {
   const repo = useMemo(() => new ApiRepository(urlBase), []);
@@ -77,11 +78,19 @@ export function useCountries() {
       country.page = page;
       return country;
     });
+
+    totalPages = arrCountries[arrCountries.length - 1].page as number;
     return arrCountries;
   };
 
   const nextPage = () => {
+    if (currentPage === totalPages) return;
     currentPage++;
+    filterByContinent(currentContinent);
+  };
+  const previousPage = () => {
+    if (currentPage === 1) return;
+    currentPage--;
     filterByContinent(currentContinent);
   };
 
@@ -90,8 +99,11 @@ export function useCountries() {
     loadCountryInfo,
     filterByContinent,
     nextPage,
+    previousPage,
     countries,
     countryInfo,
     allCountries,
+    currentPage,
+    totalPages,
   };
 }
