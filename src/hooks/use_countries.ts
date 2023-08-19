@@ -61,23 +61,22 @@ export function useCountries() {
   const assignPaginated = (arrCountries: CountryType[]) => {
     const countriesPerPage = 5;
     let totalCountries = 0;
-    let currentPage = 1;
-    debugger;
+    let page = 1;
+
     if (!arrCountries.length) {
       arrCountries = allCountries;
     }
-
     arrCountries = arrCountries.map((country) => {
       if (totalCountries === countriesPerPage) {
-        totalCountries = 0;
-        currentPage++;
+        totalCountries = 1;
+        page++;
       } else {
         totalCountries++;
       }
-      country.page = currentPage;
+
+      country.page = page;
       return country;
     });
-
     return arrCountries;
   };
 
