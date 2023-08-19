@@ -1,3 +1,3 @@
 export function Confirmation_add() {
-  return <h2>Do you want add country?</h2>;
+  return <h2>Can you imagine a new country?</h2>;
 }
