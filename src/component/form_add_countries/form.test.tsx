@@ -28,7 +28,7 @@ describe('Given the component Form', () => {
       await userEvent.click(button[0]);
     });
     test('The click in the button change the info', async () => {
-      const button = screen.getAllByRole('buttonChange');
+      const button = screen.getAllByRole('button');
       await userEvent.click(button[1]);
     });
   });

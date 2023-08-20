@@ -14,10 +14,12 @@ form {
 .header {
   background-color: #ffffff93;
   border-radius: 1rem;
+  fill-opacity: 1;
 }
 
 .legend {
-  fill-opacity: 0.5;
+  font-family: 'Times New Roman', Times, serif;
+  fill-opacity: 0.4;
   color: rgb(19, 20, 20);
   justify-content: center;
   font-size: 1.4rem;
@@ -25,11 +27,8 @@ form {
   margin-bottom: 10px;
 }
 
-h1 {
-  font-family: 'Times New Roman', Times, serif;
-}
-
 p {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
   margin-bottom: 1.25rem;
   color: rgb(17, 18, 18);
@@ -65,7 +64,7 @@ p {
   display: inline-block;
   padding: 0.5rem;
   border-radius: 2rem;
-
+  fill-opacity: 0.5;
   font-size: 1rem;
   background-color: #34db5b;
   box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
