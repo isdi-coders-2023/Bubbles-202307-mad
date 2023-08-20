@@ -92,7 +92,7 @@ export function FormCountry() {
           <input
             className={styles.input}
             type="text"
-            name=" favorite_creature"
+            name="favorite_creature"
             placeholder="Favorite creature?"
             required
             value={userData.favorite_creature}
@@ -104,7 +104,7 @@ export function FormCountry() {
           <input
             className={styles.input}
             type="text"
-            name=" position_in_the_universe"
+            name="position_in_the_universe"
             placeholder="Position on the Universe"
             required
             value={userData.position_in_the_universe}
@@ -115,7 +115,7 @@ export function FormCountry() {
           <input
             className={styles.input}
             type="text"
-            name=" capital"
+            name="capital"
             placeholder="Capital"
             required
             value={userData.capital}
