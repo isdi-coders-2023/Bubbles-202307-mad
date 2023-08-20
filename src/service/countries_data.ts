@@ -1,5 +1,3 @@
-// import { CountryType } from '../model/country_type';
-
 export const mockArrCountries = [
   {
     name: 'Saudi Arabia',
