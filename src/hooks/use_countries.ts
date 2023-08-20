@@ -107,5 +107,6 @@ export function useCountries() {
     allCountries,
     currentPage,
     totalPages,
+    currentContinent,
   };
 }

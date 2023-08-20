@@ -5,7 +5,7 @@ import styles from './option_filter.module.scss';
 
 export function OptionFilter() {
   const {
-    countriesContext: { filterCountries },
+    countriesContext: { filterCountries, currentContinent },
   } = useContext(AppContext);
   return (
     <>
@@ -14,7 +14,7 @@ export function OptionFilter() {
         onChange={(event) => {
           filterCountries((event.target as HTMLSelectElement).value);
         }}
-        defaultValue="defaultValue"
+        defaultValue={currentContinent}
       >
         <option value="defaultValue" disabled>
           Choose a continent

@@ -8,13 +8,14 @@ type Props = {
 };
 export const Card = (country: Props) => {
   const {
-    countriesContext: { loadCountryInfo },
+    countriesContext: { loadCountryInfo, filterCountries },
   } = useContext(AppContext);
   return (
     <li className={styles.li}>
       <Link
         onClick={() => {
           loadCountryInfo(country.country);
+          filterCountries('All');
         }}
         className={`${styles.card} `}
         to={`/country/${country.country.name}`}
