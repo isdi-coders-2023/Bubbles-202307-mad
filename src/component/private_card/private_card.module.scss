@@ -1,0 +1,62 @@
+.text-span {
+  font-family: 'Merienda', cursive;
+}
+.edits {
+  font-size: 1.5rem;
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.card {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  padding-block: 0.5rem;
+  flex-direction: column;
+  height: 15rem;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #f2c894;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 2rem;
+  color: black;
+}
+.link {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 60%;
+  width: 70%;
+}
+.name {
+  @extend .text-span;
+  font-size: 1.5rem;
+}
+.flag {
+  height: 100%;
+  width: 100%;
+  box-shadow: 2px 0px 0px 2px black;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  width: 100%;
+  .delete {
+    @extend .edits;
+  }
+  .continent {
+    @extend .text-span;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .edit {
+    @extend .edits;
+  }
+}
