@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Header></Header>
+
       <main>
         <AppRoutes options={menuOptions}></AppRoutes>
       </main>
@@ -16,5 +17,3 @@ function App() {
 }
 
 export default App;
-
-

@@ -3,7 +3,6 @@ import { MenuOption } from './model/menu_options';
 export const menuOptions: MenuOption[] = [
   { path: '/countries', label: 'Home' },
   { path: '/your_countries', label: 'Your countries' },
-  { path: '/error', label: 'Error404' },
   { path: '/favorite', label: 'Favorites' },
 ];
 

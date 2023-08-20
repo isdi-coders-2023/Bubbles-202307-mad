@@ -1,0 +1,81 @@
+form {
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-image: url('../../../public/el-compás-del-vintage-miente-en-un-mapa-del-mundo-antiguo-31239815.webp');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 1rem;
+  box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  background-color: #ffffff93;
+  border-radius: 1rem;
+  fill-opacity: 1;
+}
+
+.legend {
+  font-family: 'Times New Roman', Times, serif;
+  fill-opacity: 0.4;
+  color: rgb(19, 20, 20);
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  color: rgb(17, 18, 18);
+}
+
+.section {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  flex-direction: row;
+  opacity: 0.9;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  color: black;
+}
+
+.img {
+  height: 3rem;
+  width: 4rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  fill-opacity: 0.5;
+  font-size: 1rem;
+  background-color: #34db5b;
+  box-shadow: 0px 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
