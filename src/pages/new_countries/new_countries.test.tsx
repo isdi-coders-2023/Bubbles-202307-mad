@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { FormCountry } from '../../component/form_add_countries/form';
+import PageFormCountries from './new_countries';
 
 describe('Given the page newCountries', () => {
   describe('When we render it', () => {
     beforeEach(() => {
       render(
         <Router>
-          <FormCountry></FormCountry>
+          <PageFormCountries></PageFormCountries>
         </Router>
       );
     });
