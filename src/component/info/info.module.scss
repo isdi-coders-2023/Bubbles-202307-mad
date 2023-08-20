@@ -1,22 +1,26 @@
 .section {
-  background-color: aqua;
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
   align-items: center;
   justify-content: center;
 }
 
+.h2 {
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  color: white;
+}
 .button {
-  background-color: #d9d9d9;
-  justify-content: center;
-  padding: 1rem;
-  display: flex;
-  width: 5rem;
-  height: 4rem;
-  border-radius: 25%;
+  background-color: #f2c894;
+  width: 7rem;
+  border-radius: 2rem;
   text-align: center;
   font-size: 0.8rem;
-  margin: 1rem;
+  font-weight: 700;
+  font-family: 'Merienda', cursive;
+  padding: 2px;
+  cursor: pointer;
 }
 
 .span {
@@ -24,7 +28,7 @@
   justify-content: left;
   flex-direction: column;
   padding: 1rem;
-  color: #000;
+  color: white;
   text-align: center;
 }
 
@@ -45,19 +49,22 @@
 }
 
 .text {
-  color: #000;
-  font-size: 0.75rem;
+  color: white;
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
   padding: 0.1rem;
+  list-style: none;
 }
 
+.li {
+  font-family: 'Merienda', cursive;
+  font-weight: 600;
+}
 .maps {
-  color: #3445dc;
+  color: white;
   text-align: center;
-  font-size: 0.75rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 3.12rem;
 }

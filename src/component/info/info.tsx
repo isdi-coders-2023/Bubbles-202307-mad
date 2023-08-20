@@ -14,28 +14,28 @@ export function Info() {
       <Link to={menuOptions[0].path}>
         <button className={style.button}>Back to home</button>
       </Link>
+      <h2 className={style.h2}>{countryInfo.name}</h2>
       <div>
-        <span className={style.span}>{countryInfo.name}</span>
-        <img className={style.img} src={countryInfo.flag} alt="flag" />
+        {countryInfo.coatOfArm && (
+          <img
+            className={style.imgArmy}
+            src={countryInfo.coatOfArm}
+            alt="flag of Army"
+          />
+        )}
       </div>
-      <div>
-        <img
-          className={style.imgArmy}
-          src={countryInfo.coatOfArm}
-          alt="flag of Army"
-        />
-      </div>
+
       <ol className={style.text}>
-        <li>Capital: {countryInfo.capital}</li>
-        <li>Language: {countryInfo.language}</li>
-        <li>Demonym: {countryInfo.demonym}</li>
-        <li>Currencies: {countryInfo.currencies}</li>
-        <li>Population: {countryInfo.population}</li>
-        <li>Timezone: {countryInfo.timezone}</li>
+        <li className={style.li}>Capital: {countryInfo.capital}</li>
+        <li className={style.li}>Language: {countryInfo.language}</li>
+        <li className={style.li}>Demonym: {countryInfo.demonym}</li>
+        <li className={style.li}>Currencies: {countryInfo.currencies}</li>
+        <li className={style.li}>Population: {countryInfo.population}</li>
+        <li className={style.li}>Timezone: {countryInfo.timezone}</li>
       </ol>
       <div className={style.maps}>
-        map:{' '}
-        <a target="_blank" href={countryInfo.maps}>
+        {`Mapa:    `}
+        <a className={style.maps} target="_blank" href={countryInfo.maps}>
           {countryInfo.maps}
         </a>
       </div>
