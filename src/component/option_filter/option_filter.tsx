@@ -1,24 +1,26 @@
 import { useContext } from 'react';
 import { continentOption } from '../../config';
 import { AppContext } from '../../context/app_context';
+import styles from './option_filter.module.scss';
 
 export function OptionFilter() {
   const {
-    countriesContext: { filterByContinent },
+    countriesContext: { filterCountries },
   } = useContext(AppContext);
   return (
     <>
       <select
-        onChange={(event) =>
-          filterByContinent((event.target as HTMLSelectElement).value)
-        }
+        className={styles.select}
+        onChange={(event) => {
+          filterCountries((event.target as HTMLSelectElement).value);
+        }}
         defaultValue="defaultValue"
       >
         <option value="defaultValue" disabled>
           Choose a continent
         </option>
         {continentOption.map((item) => (
-          <option key={item} value={item}>
+          <option className={styles.option} key={item} value={item}>
             {item}
           </option>
         ))}

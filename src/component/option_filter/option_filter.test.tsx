@@ -8,10 +8,10 @@ jest.mock('../../hooks/use_countries');
 
 describe('Given the componente OptionFilter', () => {
   describe('When we render it', () => {
-    const filterByContinentMock = jest.fn();
+    const filterByCountryMock = jest.fn();
     const mockContextValue: AppContextStructure = {
       countriesContext: {
-        filterByContinent: filterByContinentMock,
+        filterByCountryMock: filterByCountryMock,
       },
     } as unknown as AppContextStructure;
     render(

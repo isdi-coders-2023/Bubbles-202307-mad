@@ -1,11 +1,13 @@
 .buttons {
-  background-color: #fde34f;
-  width: 5rem;
-  height: 1.5rem;
-  border-radius: 25%;
+  background-color: #f2c894;
+  width: 7rem;
+  border-radius: 2rem;
   text-align: center;
   font-size: 0.8rem;
-  font-family: 'Irish Grover', cursive;
+  font-weight: 500;
+  font-family: 'Merienda', cursive;
+  padding: 2px;
+  cursor: pointer;
 }
 
 .buttonBox {
@@ -15,7 +17,8 @@
     @extend .buttons;
   }
   .span {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: #f1f8f2;
   }
   .nextButton {
     @extend .buttons;
