@@ -1,5 +1,5 @@
 import { SyntheticEvent, useState } from 'react';
-import style from './form.module.scss';
+import styles from './form.module.scss';
 
 type Country = {
   name: string;
@@ -48,14 +48,17 @@ export function FormCountry() {
   };
 
   return (
-    <form onSubmit={handleSubmit} src="../public/Imagenjpg">
-      <legend>Can you imagine a new country?</legend>
-      <p>Please, let me know your invented country;</p>
-
-      <section className={style.group}>
-        <div className="group">
+    <form role="form" onSubmit={handleSubmit}>
+      <div className={styles.header}>
+        <legend className={styles.legend}>
+          Can you imagine a new country?
+        </legend>
+        <p className={styles.p}>Please, let me know your invented country;</p>
+      </div>
+      <section className={styles.section}>
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name="name"
             placeholder="Name of country"
@@ -65,45 +68,45 @@ export function FormCountry() {
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name="language_signal"
-            placeholder="language or signal?"
+            placeholder="Language or signal"
             required
             value={userData.language_signal}
             onChange={handleChange}
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name="currencies"
-            placeholder="Use money?"
+            placeholder="currencies"
             required
             value={userData.currencies}
             onChange={handleChange}
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name=" favorite_creature"
-            placeholder="What it´s your favorite creature?"
+            placeholder="Favorite creature?"
             required
             value={userData.favorite_creature}
             onChange={handleChange}
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name=" position_in_the_universe"
             placeholder="Position on the Universe"
@@ -112,44 +115,45 @@ export function FormCountry() {
             onChange={handleChange}
           />
         </div>
-
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name=" capital"
-            placeholder=" capital?"
+            placeholder="Capital"
             required
             value={userData.capital}
             onChange={handleChange}
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name="demonym"
-            placeholder="Demonym?"
+            placeholder="Demonym"
             required
             value={userData.demonym}
             onChange={handleChange}
           />
         </div>
 
-        <div className="group">
+        <div className={styles.div}>
           <input
-            className={style.div}
+            className={styles.input}
             type="text"
             name="population"
-            placeholder="population?"
+            placeholder="Population"
             required
             value={userData.population}
             onChange={handleChange}
           />
         </div>
       </section>
-      <button type="submit">Send the new country</button>
+      <button type="submit" className={styles.button} font-color="black">
+        Send the new country
+      </button>
     </form>
   );
 }
