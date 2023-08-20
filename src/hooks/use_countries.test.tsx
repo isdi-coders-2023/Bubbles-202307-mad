@@ -6,8 +6,6 @@ import { CountryType } from '../model/country_type';
 import { ApiRepository } from '../service/repository/api_repository';
 import { useCountries } from './use_countries';
 
-// const mockedError404 = jest.fn().mockReturnValue(<h2>Error 404</h2>);
-
 describe('Given custom hook useCountries', () => {
   const mockCountry: CountryType[] = [
     {

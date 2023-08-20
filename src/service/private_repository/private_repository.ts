@@ -16,16 +16,12 @@ export class PrivateRepository implements Repository<CountryType> {
   async getByName(name: string): Promise<CountryType> {
     const url = this.urlBase + '/' + name;
     const response = await fetch(url);
-    // if (!response.ok)
-    //   throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
   }
 
   async getAll(): Promise<CountryType[]> {
     const response = await fetch(this.urlBase);
-    // if (!response.ok)
-    //   throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
   }
@@ -38,19 +34,14 @@ export class PrivateRepository implements Repository<CountryType> {
         'Content-Type': 'application/json',
       },
     });
-    // if (!response.ok)
-    //   throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
   }
   async delete(name: string): Promise<void> {
     const url = this.urlBase + '/' + name;
-    /*const response =*/ await fetch(url, {
+    await fetch(url, {
       method: 'DELETE',
     });
-
-    // if (!response.ok)
-    //   throw new Error(`Error ${response.status}: ${response.statusText}`);
   }
 
   async update(
@@ -65,8 +56,6 @@ export class PrivateRepository implements Repository<CountryType> {
         'Content-Type': 'application/json',
       },
     });
-    // if (!response.ok)
-    //   throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
   }
