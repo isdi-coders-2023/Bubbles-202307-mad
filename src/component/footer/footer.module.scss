@@ -1,12 +1,12 @@
 .footer {
   display: flex;
-  justify-content: right;
-  background-color: #d9d9d9;
-  width: 100vw;
+  justify-content: space-between;
+  background: linear-gradient(to bottom right, #123159, #6387a6);
   height: 10vh;
   flex-shrink: 0;
   align-items: center;
-
+  font-family: 'Merienda', cursive;
+  padding-inline: 1rem;
   .logo {
     height: 4.307rem;
     width: 3.688rem;

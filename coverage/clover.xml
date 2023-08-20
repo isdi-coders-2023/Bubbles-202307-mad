@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692487271340" clover="3.2.0">
-  <project timestamp="1692487271340" name="All files">
-    <metrics statements="181" coveredstatements="174" conditionals="17" coveredconditionals="12" methods="46" coveredmethods="42" elements="244" coveredelements="228" complexity="0" loc="181" ncloc="181" packages="18" files="21" classes="21"/>
+<coverage generated="1692536279325" clover="3.2.0">
+  <project timestamp="1692536279325" name="All files">
+    <metrics statements="182" coveredstatements="175" conditionals="21" coveredconditionals="16" methods="46" coveredmethods="42" elements="249" coveredelements="233" complexity="0" loc="182" ncloc="182" packages="18" files="21" classes="21"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.ts" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\config.ts">
@@ -126,23 +126,24 @@
       </file>
     </package>
     <package name="src.component.option_filter">
-      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="option_filter.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\option_filter\option_filter.tsx">
-        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="21" count="12" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
       </file>
     </package>
     <package name="src.component.page_controler">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="page_controler.tsx" path="C:\Users\SrIzquierdo\Desktop\isdicoders\bootcamp\week-5\buuble\Bubbles-202307-mad\src\component\page_controler\page_controler.tsx">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>

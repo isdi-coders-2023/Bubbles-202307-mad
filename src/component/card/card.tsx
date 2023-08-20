@@ -16,7 +16,7 @@ export const Card = (country: Props) => {
         onClick={() => {
           loadCountryInfo(country.country);
         }}
-        className={styles.card}
+        className={`${styles.card} `}
         to={`/country/${country.country.name}`}
       >
         <span className={styles.name}>{country.country.name}</span>
