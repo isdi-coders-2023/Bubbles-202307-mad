@@ -8,15 +8,19 @@ export function PageControler() {
 
   return (
     <div className={styles.buttonBox}>
-      <button onClick={previousPage} className={styles.previousButton}>
-        PREVIOUS
-      </button>
+      {currentPage !== 1 && (
+        <button onClick={previousPage} className={styles.previousButton}>
+          PREVIOUS
+        </button>
+      )}
       <span className={styles.span}>
         Page:{currentPage}/{totalPages}
       </span>
-      <button onClick={nextPage} className={styles.nextButton}>
-        NEXT
-      </button>
+      {currentPage !== totalPages && (
+        <button onClick={nextPage} className={styles.nextButton}>
+          NEXT
+        </button>
+      )}
     </div>
   );
 }

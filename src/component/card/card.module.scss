@@ -1,24 +1,25 @@
 .spans {
   font-family: 'Merienda', cursive;
+  text-align: center;
 }
 .li {
   list-style: none;
 }
 .card {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   text-decoration: none;
   padding-block: 0.5rem;
-  flex-direction: column;
-  height: auto;
+  width: 18rem;
+  height: 18rem;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  background-color: #91ccd4;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  background-color: #f2c894;
+  box-shadow: 3px 2px 0px 0px rgb(213, 227, 230);
   border-radius: 2rem;
   color: black;
-  list-style: none;
 }
 .name {
   @extend .spans;
@@ -27,9 +28,14 @@
 .flag {
   height: 60%;
   width: 80%;
+  box-shadow: 5px 6px 0px 0px black;
 }
 .continent {
   @extend .spans;
   font-size: 1rem;
   font-weight: 700;
+}
+
+.hidden {
+  opacity: 0;
 }
