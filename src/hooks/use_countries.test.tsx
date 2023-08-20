@@ -33,8 +33,14 @@ describe('Given custom hook useCountries', () => {
       useNavigate: () => jest.fn().mockImplementation(),
     }));
 
-    const { loadAllCountries, loadCountryInfo, filterCountries, countries } =
-      useCountries();
+    const {
+      previousPage,
+      nextPage,
+      loadAllCountries,
+      loadCountryInfo,
+      filterCountries,
+      countries,
+    } = useCountries();
     const resultFilterAsia = countries
       .every((country) => country.continent === 'Asia')
       .toString();
@@ -48,6 +54,8 @@ describe('Given custom hook useCountries', () => {
         <button onClick={() => loadCountryInfo(mockCountry[0])}>2</button>
         <button onClick={() => filterCountries('Asia')}>3</button>
         <button onClick={() => filterCountries('All')}>4</button>
+        <button onClick={() => nextPage()}>5</button>
+        <button onClick={() => previousPage()}>6</button>
         <p>{countries[0]?.name}</p>
         <p>{mockCountry[0].name}</p>
         <p>{resultFilterAsia}</p>
@@ -58,10 +66,16 @@ describe('Given custom hook useCountries', () => {
   };
   describe('When the component run the hook', () => {
     beforeEach(() => {
-      ApiRepository.prototype.getAll = jest.fn().mockResolvedValue([
-        { name: 'China', continent: 'Asia' },
-        { name: 'Spain', continent: 'Europe' },
-      ]);
+      ApiRepository.prototype.getAll = jest
+        .fn()
+        .mockResolvedValue([
+          { name: 'China', continent: 'Asia' },
+          { name: 'Spain', continent: 'Europe' },
+          {},
+          {},
+          {},
+          {},
+        ]);
 
       {
         render(
@@ -98,6 +112,19 @@ describe('Given custom hook useCountries', () => {
     test('If we click button 4 new state should be render', async () => {
       const button4 = screen.getByText(/4/);
       await userEvent.click(button4);
+      const countryElement = await screen.findAllByText('false');
+      expect(countryElement[1]).toBeInTheDocument();
+    });
+
+    test('If we click button 5 nextPage new state should be render', async () => {
+      const button5 = screen.getByText(/5/);
+      await userEvent.click(button5);
+      const countryElement = await screen.findAllByText('false');
+      expect(countryElement[1]).toBeInTheDocument();
+    });
+    test('If we click button 6 nextPage new state should be render', async () => {
+      const button6 = screen.getByText(/6/);
+      await userEvent.click(button6);
       const countryElement = await screen.findAllByText('false');
       expect(countryElement[1]).toBeInTheDocument();
     });

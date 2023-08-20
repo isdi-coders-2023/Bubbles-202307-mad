@@ -25,7 +25,6 @@ export function useCountries() {
   const loadAllCountries = useCallback(async () => {
     try {
       const countries = await repo.getAll();
-      allCountries = countries;
       allCountries = assignPaginated(countries);
       dispatch(
         ac.loadAllCountriesActionCreator(
