@@ -1,8 +1,10 @@
-const FormCountries = () => {
+import { FormCountry } from '../../component/form_add_countries/form';
+
+const PageFormCountries = () => {
   return (
     <>
-      <FormCountries></FormCountries>
+      <FormCountry></FormCountry>
     </>
   );
 };
-export default FormCountries;
+export default PageFormCountries;
