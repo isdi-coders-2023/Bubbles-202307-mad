@@ -10,4 +10,5 @@ export type CountryType = {
   population: number;
   timezone: string;
   maps: string;
+  page?: number;
 };

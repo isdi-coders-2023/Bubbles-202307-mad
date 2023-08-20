@@ -15,13 +15,13 @@ export function Countries() {
 
   return (
     <section className={styles.section}>
+      <PageControler></PageControler>
       <OptionFilter></OptionFilter>
       <ol className={styles.ol}>
         {countries.map((item) => (
           <Card key={item.name} country={item}></Card>
         ))}
       </ol>
-      <PageControler></PageControler>
     </section>
   );
 }

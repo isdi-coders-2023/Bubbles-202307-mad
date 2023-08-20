@@ -4,14 +4,14 @@ import { AppContext } from '../../context/app_context';
 
 export function OptionFilter() {
   const {
-    countriesContext: { filterByContinent },
+    countriesContext: { filterCountries },
   } = useContext(AppContext);
   return (
     <>
       <select
-        onChange={(event) =>
-          filterByContinent((event.target as HTMLSelectElement).value)
-        }
+        onChange={(event) => {
+          filterCountries((event.target as HTMLSelectElement).value);
+        }}
         defaultValue="defaultValue"
       >
         <option value="defaultValue" disabled>
