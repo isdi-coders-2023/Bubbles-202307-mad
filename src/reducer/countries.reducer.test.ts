@@ -1,6 +1,6 @@
 import { CountryType } from '../model/country_type';
 import {
-  filterByContinentCreator,
+  filterCountriesCreator,
   loadAllCountriesActionCreator,
   loadCardInfoActionCreator,
 } from './countries.action.creator';
@@ -20,7 +20,7 @@ describe('Given the function countriesReducer', () => {
   describe('When it receives the action filterByContinent ', () => {
     test('The state should be the action payload', () => {
       const payloadMock = [{ name: 'China' } as CountryType];
-      const action = filterByContinentCreator(payloadMock);
+      const action = filterCountriesCreator(payloadMock);
       const result = countriesReducer([], action);
       expect(result).toEqual(payloadMock);
     });
