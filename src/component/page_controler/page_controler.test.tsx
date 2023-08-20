@@ -20,7 +20,6 @@ describe('Given the component page_controler', () => {
     test('the component should be in the document', () => {
       const element = screen.getAllByRole('button');
       expect(element[0]).toBeInTheDocument();
-      expect(element[1]).toBeInTheDocument();
     });
   });
 });

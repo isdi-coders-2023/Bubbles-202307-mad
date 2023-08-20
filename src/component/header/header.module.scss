@@ -3,10 +3,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
   height: 20vh;
-  background-color: #092773;
+  padding-block: 1rem;
+  background: linear-gradient(to bottom right, #123159, #6387a6);
+  border-bottom: 2px solid white;
   position: relative;
+  font-family: 'Merienda', cursive;
   .tittle {
     padding-inline: 30vw;
     color: #ffffff;
@@ -21,7 +23,7 @@
     text-shadow: 2px 2px 2px #000001;
   }
   .world {
-    max-width: 300px;
+    max-width: 200px;
     width: 70%;
     height: 90%;
   }
