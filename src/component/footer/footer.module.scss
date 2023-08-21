@@ -1,6 +1,7 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
   background: linear-gradient(to bottom right, #123159, #6387a6);
   height: 10vh;
   flex-shrink: 0;
@@ -8,13 +9,14 @@
   font-family: 'Merienda', cursive;
   padding-inline: 1rem;
   .logo {
-    height: 4.307rem;
-    width: 3.688rem;
-    padding: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 8px 1px rgb(255, 255, 255);
   }
 
   .phrase {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: black;
     text-align: center;
   }
