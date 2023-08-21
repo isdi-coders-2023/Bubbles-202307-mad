@@ -147,9 +147,7 @@ export function FormCountry() {
           />
         </div>
       </section>
-      <button role="button" onClick={handleSubmit}>
-        button1
-      </button>
+      <button role="button" onClick={handleSubmit}></button>
       <button role="button" onClick={handleChange}></button>
       <button type="submit" className={styles.button} font-color="black">
         Send the new country
