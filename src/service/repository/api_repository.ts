@@ -9,7 +9,7 @@ export class ApiRepository implements Repository<CountryType> {
   constructor(urlBase: string) {
     this.urlBase = urlBase;
   }
-  private async filterKeys(data: any): Promise<CountryType[]> {
+  private filterKeys(data: any): Promise<CountryType[]> {
     const result = data.map((country: any) => {
       const language = country.languages
         ? Object.entries(country.languages)[0][1]
@@ -18,7 +18,7 @@ export class ApiRepository implements Repository<CountryType> {
         ? (Object.entries(country.currencies) as any)[0][1].name +
           ' ' +
           (Object.entries(country.currencies) as any)[0][1].symbol
-        : 'No hay dinero';
+        : 'There is no money';
 
       const countryData = {
         name: country.name?.common,

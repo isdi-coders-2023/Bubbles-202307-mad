@@ -7,7 +7,7 @@ import { ApiRepository } from '../service/repository/api_repository';
 import { useCountries } from './use_countries';
 
 describe('Given custom hook useCountries', () => {
-  const mockCountry: CountryType[] = [
+  const mockCountries: CountryType[] = [
     {
       name: 'Saudi Arabia',
       continent: 'Asia',
@@ -24,13 +24,11 @@ describe('Given custom hook useCountries', () => {
     },
     { continent: 'All' } as CountryType,
   ];
-
+  jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => jest.fn().mockImplementation(),
+  }));
   const TestComponent = () => {
-    jest.mock('react-router-dom', () => ({
-      ...jest.requireActual('react-router-dom'),
-      useNavigate: () => jest.fn().mockImplementation(),
-    }));
-
     const {
       previousPage,
       nextPage,
@@ -49,13 +47,13 @@ describe('Given custom hook useCountries', () => {
     return (
       <div>
         <button onClick={() => loadAllCountries()}>1</button>
-        <button onClick={() => loadCountryInfo(mockCountry[0])}>2</button>
+        <button onClick={() => loadCountryInfo(mockCountries[0])}>2</button>
         <button onClick={() => filterCountries('Asia')}>3</button>
         <button onClick={() => filterCountries('All')}>4</button>
         <button onClick={() => nextPage()}>5</button>
         <button onClick={() => previousPage()}>6</button>
         <p>{countries[0]?.name}</p>
-        <p>{mockCountry[0].name}</p>
+        <p>{mockCountries[0].name}</p>
         <p>{resultFilterAsia}</p>
         <p>{resultFilterAll}</p>
         <div>{}</div>

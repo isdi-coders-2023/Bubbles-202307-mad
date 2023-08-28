@@ -5,7 +5,7 @@ import { AppContext, AppContextStructure } from '../../context/app_context';
 import { CountryType } from '../../model/country_type';
 import { Info } from './info';
 describe('Given the component Info', () => {
-  const mockCountry = [
+  const mockCountries = [
     {
       name: 'Saudi Arabia',
       continents: ['Asia'],
@@ -24,7 +24,7 @@ describe('Given the component Info', () => {
     const mockContextValue: AppContextStructure = {
       countriesContext: {
         countryInfo: {
-          mockCountry,
+          mockCountry: mockCountries,
         },
       },
     } as unknown as AppContextStructure;
